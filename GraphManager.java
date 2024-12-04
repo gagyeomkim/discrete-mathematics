@@ -75,7 +75,7 @@ public class GraphManager {
                         this.graphs.get(graphInitialIndex).matrix[startNode - 1][node - 1] = weight;    //가중치 그래프는, 인접행렬을 1 대신 가중치로 표현할 것
                     }
 
-                    //엣지가 존재하지 않는 경우, -1로 초기화 (inf를 -1로 표현)
+                    //엣지가 존재하지 않는 경우, Integer.MAX_VALUE로 초기화 (inf를 Integer.MAX_VALUE로 표현)
                     for (int j = 0; j < vertex; j++) {
                         if (this.graphs.get(graphInitialIndex).matrix[startNode - 1][j] != 0) continue;
                         else if ((startNode - 1) != j)  //인접 행렬의 entry가 0이고, 같은 노드가 아닐 경우
