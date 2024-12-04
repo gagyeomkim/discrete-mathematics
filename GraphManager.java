@@ -283,7 +283,7 @@ public class GraphManager {
     private void findDijkstraTraversal(int[] previous, int[] D, int startIndex, int endIndex) {
         ArrayList<Integer> traversal = new ArrayList<>();
         int traversalIndex = endIndex;
-        /*시작점을 만날 때까지, 현재 정점을 경로에 추가하고, traversalIndex를 previous[traversalIndex](이전 노드)*/
+        /*시작점을 만날 때까지, 현재 정점을 경로에 추가하고, traversalIndex를 previous[traversalIndex](=이전 노드)로 변경*/
         while (traversalIndex != -1) {
             traversal.add(traversalIndex + 1);
             traversalIndex = previous[traversalIndex];
